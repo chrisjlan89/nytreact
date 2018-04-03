@@ -13,10 +13,10 @@ const app = express();
 
 app.use(express.static("./client/build"));
 
-// app.get("*", function(req, res){
-//     res.sendFile(path.join(_dirname, "./client/build/index.html"));
+ app.get("*", function(req, res){
+     res.sendFile(path.join(_dirname, "./client/build/index.html"));
 
-// });
+ });
 
 app.listen(PORT, function(){
     console.log(`Server now on port ${PORT}`)
